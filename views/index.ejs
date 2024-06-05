@@ -1,0 +1,21 @@
+<%- include('templates/head.ejs') %>
+<main>
+    <h2>Nuestro equipo</h2>
+    <section>
+        <% result.forEach(team => { %>
+        <a href="/team/<%= team.nombre %>">
+            <div class="card Ventas <%= team.departamento %>">
+            <img src="/img_customers/<%=team.foto%>" alt="foto de <%= team.nombre %>">
+            <h3><%= team.nombre %></h3>
+            <p><%= team.email %></p>
+            <hr>
+            <p><%= team.departamento %></p>
+        </div>
+        <% }); %>
+    </a>
+    </section>
+
+  
+</main>
+</body>
+</html>
